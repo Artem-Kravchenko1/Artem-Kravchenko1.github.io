@@ -1,0 +1,26 @@
+.container {
+	position: absolute;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	margin: 0 auto;
+}
+
+ul {
+	display: flex;
+	flex-direction: column;
+	row-gap: 1rem;
+	padding: 0;
+}
+
+li {
+	list-style-type: none;
+}
+
+a {
+	color: red;
+}
