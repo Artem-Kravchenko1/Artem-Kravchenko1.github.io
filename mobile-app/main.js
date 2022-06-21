@@ -9,7 +9,6 @@ document.addEventListener('DOMContentLoaded', () => {
 		burger = document.querySelector('.burger');
 		burgerBtn = document.querySelector('.burger__btn');
 		burgerContent = document.querySelector('.burger__content');
-		body = document.querySelector('body');
 		burgerActive = false;
 		intro = document.querySelector('.intro');
 		headerHeight = parseInt( getComputedStyle(header).height );
@@ -45,13 +44,9 @@ document.addEventListener('DOMContentLoaded', () => {
 		if (burgerActive) {
 			header.style.backgroundColor = 'rgb(0, 49, 113)';
 			header.classList.add('header__fixed');
-			body.style.overflow = 'hidden';
 		} else if (window.pageYOffset < headerOffsetTop) {
 			header.style.backgroundColor = 'rgb(0, 49, 113, 0.4)';
 			header.classList.remove('header__fixed');
-			body.style.overflow = 'unset';
-		} else {
-			body.style.overflow = 'unset';
 		}
 	})
 

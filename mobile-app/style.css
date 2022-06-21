@@ -6,6 +6,12 @@ body {
 	font-family: 'Roboto', sans-serif;
 	font-size: 0.875rem;
 	font-weight: 400;
+
+	overflow-y: unset;
+}
+
+body:has(.burger.active) {
+	overflow-y: hidden;
 }
 
 a {
