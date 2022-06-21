@@ -248,6 +248,8 @@ h2 {
 	align-items: end;
 	text-align: right;
 
+	overflow-y: scroll;
+
 	visibility: hidden;
 	opacity: 0;
 	transition: all 0.3s linear;
