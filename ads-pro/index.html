@@ -19,7 +19,7 @@
 		<div class="container">
 			<div class="header__inner d-flex w-100 align-items-center">
 				<img src="img/logo.png" class="logo d-inline-block">
-				<menu class="menu d-flex justify-content-between w-100 align-items-center">
+				<menu class="header__menu menu d-flex justify-content-between w-100 align-items-center">
 					<nav class="nav d-inline-block">
 						<div class="nav__item d-inline-block">Про нас</div>
 						<div class="nav__item d-inline-block">Сервис</div>
@@ -32,6 +32,24 @@
 						<div class="phone">+380 44 333 96 92</div>
 					</div>
 				</menu>
+				<div class="header__burger burger">
+					<button class="burger__btn">
+						<div class="burger__btn-ico"></div>
+					</button>
+					<div class="burger__content">
+						<nav class="nav d-inline-block">
+							<div class="nav__item d-inline-block">Про нас</div>
+							<div class="nav__item d-inline-block">Сервис</div>
+							<div class="nav__item d-inline-block">Отзывы</div>
+							<div class="nav__item d-inline-block">Контакты</div>
+						</nav>
+						<div class="phones d-inline-block">
+							<img src="img/phone.svg" class="phones__ico">
+							<div class="phone">+380 66 691 14 62</div>
+							<div class="phone">+380 44 333 96 92</div>
+						</div>
+					</div>
+				</div>
 			</div>
 		</div>
 	</header>
@@ -50,14 +68,23 @@
 						<img src="img/partner.png" class="intro__partner">
 					</div>
 					<div class="intro__wheel col-md-6">
-						<img src="img/intro_1.png" class="wheel__img">
+						<img src="img/intro-1.png" class="wheel__img">
 						<div class="intro__arrows">
 							<img src="img/left-arrow.png" alt="" class="intro__arrow intro__left-arrow">
 							<img src="img/right-arrow.png" alt="" class="intro__arrow intro__right-arrow">
 						</div>
 					</div>
-
-
+					<div class="intro__bullets">
+						<button class="intro__bullet active" data-num="1"><img src="img/keys-1.png" alt="" class="intro__bullet-img"></button>
+						<div class="intro__bullets-gap"></div>
+						<button class="intro__bullet" data-num="2"><img src="img/keys-2.png" alt="" class="intro__bullet-img"></button>
+						<div class="intro__bullets-gap"></div>
+						<button class="intro__bullet" data-num="3"><img src="img/keys-3.png" alt="" class="intro__bullet-img"></button>
+						<div class="intro__bullets-gap"></div>
+						<button class="intro__bullet" data-num="4"><img src="img/keys-4.png" alt="" class="intro__bullet-img"></button>
+						<div class="intro__bullets-gap"></div>
+						<button class="intro__bullet" data-num="5"><img src="img/keys-5.png" alt="" class="intro__bullet-img"></button>
+					</div>
 				</div>
 			</div>
 		</section>
@@ -287,8 +314,7 @@
 			</div>
 		</div>
 	</footer>
+
+	<script src="js/script.js"></script>
 </body>
-
-
-
 </html>
