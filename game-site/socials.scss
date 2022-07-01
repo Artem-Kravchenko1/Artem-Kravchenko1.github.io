@@ -1,0 +1,19 @@
+.socials {
+	display: flex;
+	column-gap: 3px;
+	.social {
+		display: block;
+		width: 19px;
+		height: 19px;
+		border-radius: 50%;
+		.social__img {
+			width: 100%;
+			height:	100%;
+		}
+		transition: all 0.15s linear;
+		&:hover {
+			background-color: #000;
+			transform: scale(1.11);
+		}
+	}
+}

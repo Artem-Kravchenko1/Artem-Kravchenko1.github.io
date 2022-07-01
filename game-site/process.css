@@ -1,0 +1,105 @@
+.process .process__body {
+  padding-top: 66px;
+  padding-bottom: 64px;
+}
+
+.process .process__body .process__header {
+  padding-left: 80px;
+  padding-right: 64px;
+  line-height: 1.23;
+  margin-bottom: 43px;
+}
+
+.process .process__body .process__header .process__title {
+  margin-bottom: 26px;
+}
+
+.process .process__body .process__header .process__subtitle {
+  font-size: 1rem;
+  font-style: italic;
+  font-weight: 600;
+  letter-spacing: 1px;
+  margin-bottom: 1.23em;
+}
+
+.process .process__body .process__header .process__text {
+  color: #595959;
+  font-size: .875rem;
+}
+
+.process .process__body .process__content {
+  display: -ms-grid;
+  display: grid;
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content;
+  margin: 0 auto;
+  -ms-grid-columns: (430px)[2];
+      grid-template-columns: repeat(2, 430px);
+  -ms-grid-rows: (1fr)[3];
+      grid-template-rows: repeat(3, 1fr);
+}
+
+.process .process__body .process__content .process__item-photo .process__item-img {
+  display: block;
+}
+
+.process .process__body .process__content .process__item-content {
+  line-height: 1.23;
+}
+
+.process .process__body .process__content .process__item-content .process__item-title:after {
+  display: none;
+}
+
+.process .process__body .process__content .process__item-content .process__item-title {
+  line-height: 2.25rem;
+}
+
+.process .process__body .process__content .process__item-content .process__item-subtitle {
+  font-size: 1rem;
+  font-style: italic;
+  font-weight: 600;
+  letter-spacing: 1.33px;
+  margin-bottom: 1.23em;
+}
+
+.process .process__body .process__content .process__item-content .process__item-text {
+  font-size: 0.875rem;
+  color: #595959;
+}
+
+.process .process__body .process__content .process__item-content:nth-child(2) {
+  position: relative;
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content;
+  max-width: 500px;
+  margin-left: 34px;
+}
+
+.process .process__body .process__content .process__item-content:nth-child(2) .process__item-title {
+  margin-top: 29px;
+  margin-bottom: 32px;
+}
+
+.process .process__body .process__content .process__item-content:nth-child(3) {
+  padding-left: 39px;
+  padding-right: 40px;
+}
+
+.process .process__body .process__content .process__item-content:nth-child(3) .process__item-title {
+  margin-top: 51px;
+  margin-bottom: 60px;
+}
+
+.process .process__body .process__content .process__item-content:nth-child(6) {
+  padding-left: 34px;
+  padding-right: 45px;
+}
+
+.process .process__body .process__content .process__item-content:nth-child(6) .process__item-title {
+  margin-top: 96px;
+  margin-bottom: 31px;
+}
+/*# sourceMappingURL=process.css.map */

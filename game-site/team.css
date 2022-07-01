@@ -1,0 +1,65 @@
+.team__body {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding-left: 50px;
+  padding-right: 69px;
+  padding-top: 85px;
+  padding-bottom: 150px;
+}
+
+.team__body .team__title-container {
+  padding-right: 146px;
+  padding-top: 14px;
+}
+
+.team__body .team__title-container .team__title::after {
+  width: 84px;
+}
+
+.team__body .team__subtitle, .team__body .team__text {
+  max-width: 625px;
+}
+
+.team__body .team__subtitle {
+  font-size: 1rem;
+  font-style: italic;
+  font-weight: 600;
+  letter-spacing: 1.23px;
+  margin-bottom: 1.23em;
+}
+
+.team__body .team__text {
+  font-size: .875rem;
+  color: #595959;
+  margin-bottom: 35px;
+}
+
+.team__body .team__items {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-column-gap: 20px;
+          column-gap: 20px;
+  row-gap: 30px;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.team__body .team__items .teammate {
+  text-align: center;
+}
+
+.team__body .team__items .teammate .teammate__photo {
+  margin-bottom: 1rem;
+}
+
+.team__body .team__items .teammate .teammate__name {
+  font-weight: 600;
+}
+
+.team__body .team__items .teammate .teammate__job-title {
+  letter-spacing: 1px;
+  font-style: italic;
+}
+/*# sourceMappingURL=team.css.map */

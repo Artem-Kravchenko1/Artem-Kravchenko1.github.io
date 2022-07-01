@@ -1,0 +1,102 @@
+.contact__body {
+	display: flex;
+	padding-bottom: 73px;
+	.contact__map {
+		width: 42%;
+		overflow: hidden;
+		display: flex;
+	}
+
+	.contact__content {
+		padding-top: 52px;
+		padding-left: 76px;
+		background-color: #2046b3;
+		flex-grow: 1;
+		color: #fff;
+		.contact__title {
+			margin-left: 23px;
+			margin-bottom: 16px;
+			&:after {
+				width: 172px;
+				right: unset;
+				left: 0;
+			}
+		}
+		.contact__form {
+			max-width: 415px;
+			width: 100%;
+			margin-bottom: 62px;
+			input, textarea {
+				background-color: transparent;
+				border: 2px solid #c5c5c5;
+				color: #fff;
+				outline: none;
+				padding: 8px;
+				font-weight: 600;
+				width: 100%;
+				margin-bottom: 16px;
+			}
+			textarea {
+				resize: none;
+				margin-bottom: 22px;
+			}
+			input::placeholder, textarea::placeholder {
+				color: #fff;
+				font-weight: 600;
+			}
+			.form__input-double {
+				display: flex;
+			}
+			input[type="tel"] {
+				max-width: 160px;
+				margin-right: 47px;
+			}
+			button[type="submit"] {
+				background-color: $yellow;
+				color: #000;
+				text-transform: uppercase;
+				font-weight: 600;
+				padding: 8px 31px;
+				border: none;
+				outline: none;
+				cursor: pointer;
+				transition: transform 0.15s linear;
+				&:hover {
+					transform: translateY(-5px);
+				}
+			}
+		}
+		.contact__location {
+			max-width: 415px;
+			width: 100%;
+			padding-left: 20px;
+			padding-bottom: 64px;
+			width: 100%;
+			border-bottom: 1px solid rgba(255, 255, 255, 0.5);
+			margin-bottom: 8px;
+		}
+		.contact__location-title {
+			font-weight: 600;
+			margin-bottom: 2em;
+		}
+		.contact__location-table {
+			display: flex;
+			column-gap: 24px;
+			.contact__location-column {
+				display: flex;
+				flex-direction: column;
+				row-gap: 20px;
+				justify-content: space-between;
+			}
+			.contact__location-column:first-child {
+				font-weight: 600;
+			}
+			.contact__location-column:last-child {
+				font-size: 0.75rem;
+			}			
+		}
+		.contact__socials {
+			margin-left: 22px;
+		}
+	}
+}

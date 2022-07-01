@@ -1,0 +1,28 @@
+.socials {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-column-gap: 3px;
+          column-gap: 3px;
+}
+
+.socials .social {
+  display: block;
+  width: 19px;
+  height: 19px;
+  border-radius: 50%;
+  -webkit-transition: all 0.15s linear;
+  transition: all 0.15s linear;
+}
+
+.socials .social .social__img {
+  width: 100%;
+  height: 100%;
+}
+
+.socials .social:hover {
+  background-color: #000;
+  -webkit-transform: scale(1.11);
+          transform: scale(1.11);
+}
+/*# sourceMappingURL=socials.css.map */

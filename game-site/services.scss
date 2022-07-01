@@ -1,0 +1,37 @@
+.services {
+	.services__body {
+		padding-left: 50px;
+		padding-right: 50px;
+		padding-top: 41px;
+		padding-bottom: 58px;
+		background: url('img/services/services-bg.jpg') center / cover;
+		color: #fff;
+
+		.services__title {
+			margin-bottom: 55px;
+		}
+
+		.services__content {
+			display: grid;
+			grid-template-columns: repeat(2, 225px);
+			column-gap: 91px;
+			row-gap: 75px;
+			width: max-content;
+			margin-left: auto;
+			margin-right: 134px;
+
+			.services__item {
+				line-height: 1.23;
+				.services__item-title {
+					width: max-content;
+					font-size: 1.125rem;
+					margin-bottom: 1.5em;
+				}
+				.services__item-text {
+					max-width: 225px;
+					font-size: .6875rem;
+				}
+			}
+		}
+	}
+}

@@ -1,0 +1,70 @@
+@import 'variables.scss';
+
+html,
+body {
+	height: 100%;
+	font-family: 'Myriad Pro';
+}
+
+*, *:before, *:after {
+	box-sizing: border-box;
+}
+
+.wrapper {
+	width: 100%;
+	max-width: 1200px;
+	margin: 0 auto;
+	background-color: #fff;
+}
+
+.fullscreen {
+	min-height: 100vh;
+}
+
+section, footer {
+	background-color: $bg;
+}
+
+h1 {
+	font-size: 12.625rem;
+	font-weight: 700;
+	line-height: 9.125rem;
+}
+
+h2 {
+	font-size: 3.75rem;
+	font-weight: 700;
+	line-height: 3rem;
+}
+
+h3 {
+	font-size: 1.875rem;
+	font-weight: 400;
+	position: relative;
+	width: max-content;
+}
+
+h3:after {
+	content: "";
+	width: 133px;
+	height: 1px;
+	background-color: #c5c5c5;
+	position: absolute;
+	right: 0;
+	bottom: -1px;
+}
+
+a {
+	color: inherit;
+	text-decoration: inherit;
+
+	cursor: pointer;
+}
+
+span.capital {
+	font-size: calc(5em / 3);
+}
+
+span.yellow {
+	color: $yellow;
+}
