@@ -1,0 +1,72 @@
+.header {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	padding: 15px;
+	margin-bottom: 50px;
+	.header__date {
+		display: flex;
+		align-items: center;
+		column-gap: 7px;
+		.header__date-btn {
+			width: 4px;
+			display: flex;
+			flex-direction: column;
+			height: 12px;
+			position: relative;
+			&::before {
+				content: "";
+				position: absolute;
+				right: 0;
+				top: 0;
+				display: block;
+				width: 7px;
+				height: 1px;
+				transform: rotate(-60deg);
+				transform-origin: top right;
+				background-color: #000;
+			}
+			&::after {
+				content: "";
+				position: absolute;
+				right: 0;
+				bottom: 0;
+				display: block;
+				width: 7px;
+				height: 1px;
+				transform: rotate(60deg);
+				transform-origin: bottom right;
+				background-color: #000;
+			}
+			&.next-btn::before {
+				transform: rotate(60deg);
+				transform-origin: top left;
+				left: 0;
+			}
+			&.next-btn::after {
+				transform: rotate(-60deg);
+				transform-origin: bottom left;
+				left: 0;
+			}
+		}
+		.header__date-day {
+			width: 2ch;
+			box-sizing: content-box;
+			text-align: right;
+		}
+		.header__date-year {
+			width: 4ch;
+			box-sizing: content-box;
+		}
+	}
+	.header__user {
+		display: flex;
+		column-gap: 8px;
+		.header__exit {
+			height: 16px;
+			.header__exit-img {
+				height: 100%;
+			}
+		}
+	}
+}
