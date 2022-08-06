@@ -1,75 +1,80 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
 	<meta charset="UTF-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<link rel="preconnect" href="https://fonts.googleapis.com">
-	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-	<link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
 	<link rel="stylesheet" href="reset.css">
 	<link rel="stylesheet" href="style.css">
-	<title>Day</title>
+	<title>Calendar</title>
 </head>
-
 <body>
-	<header class="header">
-		<div class="header__tab"><a href="calendar.html" class="header__tab-link">Календарь</a></div>
-		<div class="header__date">
-			<a href="" class="header__date-btn prev-btn" data-button-target="day" data-button-direction="-1"></a>
-			<input class="header__date-day" type="text" name="date-day" value="27">
-			<select name="date-month" class="header__date-month">
-				<option value="1" class="header__date-month-text">Январь</option>
-				<option value="2" class="header__date-month-text">Февраль</option>
-				<option value="3" class="header__date-month-text">Март</option>
-				<option value="4" class="header__date-month-text">Апрель</option>
-				<option value="5" class="header__date-month-text">Май</option>
-				<option value="6" class="header__date-month-text">Июнь</option>
-				<option value="7" class="header__date-month-text">Июль</option>
-				<option value="8" class="header__date-month-text">Август</option>
-				<option value="9" class="header__date-month-text">Сентябрь</option>
-				<option value="10" class="header__date-month-text" selected>Октябрь</option>
-				<option value="11" class="header__date-month-text">Ноябрь</option>
-				<option value="12" class="header__date-month-text">Декабрь</option>
-			</select>
-			<input class="header__date-year" type="text" name="date-year" value="2022">
-			<a href="" class="header__date-btn next-btn" data-button-target="day" data-button-direction="1"></a>
-			<a href="" class="header__return-btn"><img src="img/return.png" alt="return today"></a>
-		</div>
-		<div class="header__user">
-			<div class="header__username"></div>
-			<a href="#" class="header__exit"><img src="img/exit.png" alt="" class="header__exit-img"></a>
-		</div>
-	</header>
-	<main>
-		<section class="items">
+	<div class="fullscreen">
+		<header class="header">
+			<div class="header__tab"><a href="day.html" class="header__tab-link">Сегодня</a><div class="header__tab-progress-line"><div class="line-after"></div></div></div>
+			<div class="header__date">
+				<a href="" class="header__date-btn prev-btn" data-button-target="month" data-button-direction="-1"></a>
+				<select name="date-month" class="header__date-month">
+					<option value="1" class="header__date-month-text">Январь</option>
+					<option value="2" class="header__date-month-text">Февраль</option>
+					<option value="3" class="header__date-month-text">Март</option>
+					<option value="4" class="header__date-month-text">Апрель</option>
+					<option value="5" class="header__date-month-text">Май</option>
+					<option value="6" class="header__date-month-text">Июнь</option>
+					<option value="7" class="header__date-month-text">Июль</option>
+					<option value="8" class="header__date-month-text">Август</option>
+					<option value="9" class="header__date-month-text">Сентябрь</option>
+					<option value="10" class="header__date-month-text" selected>Октябрь</option>
+					<option value="11" class="header__date-month-text">Ноябрь</option>
+					<option value="12" class="header__date-month-text">Декабрь</option>
+				</select>
+				<input class="header__date-year" type="text" name="date-year" value="2022">
+				<a href="" class="header__date-btn next-btn" data-button-target="month" data-button-direction="1"></a>
+				<a href="" class="header__return-btn"><img src="img/return.png" alt="return today"></a>
+			</div>
+			<div class="header__user">
+				<div class="header__username"></div>
+				<a href="#" class="header__exit"><img src="img/exit.png" alt="" class="header__exit-img"></a>
+			</div>
+		</header>
+		<section class="calendar__section">
 			<div class="wrapper">
-				<div class="items__content">
-					<div class="content-progres-line before">
-						<div class="line-after"></div>
-					</div>
-					<div class="items__item" data-item-id="-1">
-						
-						<input type="checkbox" name="item-checkbox" id="">
-						<div class="item__time">(<div class="field"></div>)</div>
-						<span class="item__text" role="textbox"	contenteditable placeholder="Запишите дело"></span>
-						<a href="#planning-events" class="item__planning popup-link"><img src="img/time.png" alt=""
-								class="item__planning-img"></a>
-						<a href="#" class="item__delete"><img src="img/trash.png" alt="" class="item__delete-img"></a>
-					</div>
-					<div class="content-progres-line after">
-						<div class="line-after"></div>
-					</div>
+				<div class="calendar__week-names">
+					<div class="calendar__week-day">Пн<a href="day.html" class="today__link"></a></div>
+					<div class="calendar__week-day">Вт<a href="day.html" class="today__link"></a></div>
+					<div class="calendar__week-day">Ср<a href="day.html" class="today__link"></a></div>
+					<div class="calendar__week-day">Чт<a href="day.html" class="today__link"></a></div>
+					<div class="calendar__week-day">Пт<a href="day.html" class="today__link"></a></div>
+					<div class="calendar__week-day">Сб<a href="day.html" class="today__link"></a></div>
+					<div class="calendar__week-day">Нд<a href="day.html" class="today__link"></a></div>
+				</div>
+				<div class="calendar">
+					<a href="day.html" class="calendar__day">
+						<div class="border-before">
+							<div class="border-after">
+								<div class="calendar__day-num">1</div>
+								<div class="calendar__day-items"><span class="items-num"></span><span class="text-items"> items</span></div>
+								<div class="pseudo-for-fix"></div>
+								<div class="link-ico"><img src="img/link.png" alt=""></div>
+							</div>
+						</div>
+					</a>
 				</div>
 			</div>
 		</section>
-		<section class="description">
-			<div class="wrapper">
-				<span role="textbox" name="" class="description__content" contenteditable></span>
+	</div>
+	<section class="planning">
+		<div class="wrapper">
+			<h2 class="planning__title">Запланировать событие:</h2>
+			<div class="planning__container">
+				<span role="textbox" name="" class="planning__content" contenteditable></span>
+				<a href="#planning-events" class="planning__btn popup-link"><img src="img/time.png" alt="" class="planning__btn-img"></a>
 			</div>
-		</section>
-	</main>
+		</div>
+	</section>
 	<div id="planning-events" class="planning-events popup">
 		<div class="planning-events__wrapper popup__wrapper">
 			<div class="planning-events__content popup__content">
@@ -77,8 +82,8 @@
 				<div class="once-dates">
 					<div class="first-dates__title dates__title">Первая дата</div>
 					<div class="first-dates__content date-content">
-						<div class="first-dates__item date-item">
-							<input type="text" name="append-once-date-day" class="day-field item-field write-field" id="" value="">
+						<div class="first-dates__item date-item last">
+							<input type="text" name="append-once-date-day" class="day-field item-field write-field" id="" value="30">
 							<select name="append-once-date-month" id="" class="month-field item-field write-field">
 								<option value=""></option>
 								<option value="1">Января</option>
@@ -87,21 +92,21 @@
 								<option value="4">Апреля</option>
 								<option value="5">Мая</option>
 								<option value="6">Июня</option>
-								<option value="7">Июля</option>
+								<option value="7" selected>Июля</option>
 								<option value="8">Августа</option>
 								<option value="9">Сентября</option>
 								<option value="10">Октября</option>
 								<option value="11">Ноября</option>
 								<option value="12">Декабря</option>
 							</select>
-							<input type="text" name="append-once-date-year" class="year-field item-field write-field" id="" value="">
+							<input type="text" name="append-once-date-year" class="year-field item-field write-field" id="" value="2022">
 							<span class="write-field">года в</span>
 							<div class="time-field">
 								<input type="text" name="append-plan-date-time-hours" class="hour-field item-field write-field" id=""
-									value="">
+									value="12">
 								<span class="write-field">:</span>
 								<input type="text" name="append-plan-date-time-minutes" class="minute-field item-field write-field"
-									id="" value="">
+									id="" value="21">
 							</div>
 							<a href="#" class="date-item__delete"><img src="img/trash.png" alt="" class="date-item__delete-img"></a>
 						</div>
@@ -253,14 +258,13 @@
 					</div>
 				</div>
 				<a href="#" class="plan__confirm-btn popup-close">Да</a>
-				<div style="font-size:0.7rem;">*Окно закроется по завершению настройки</div>
+				<div>Окно закроется по завершению настройки</div>
 			</div>
 		</div>
 	</div>
-	<script type="module" src="dayItems.js"></script>
+
+	<script type="module" src="calendarDays.js"></script>
 	<script type="module" src="popups.js"></script>
 	<script type="module" src="planEventsForm.js"></script>
-	<!-- <script type="module" src="databaseInit.js"></script> -->
 </body>
-
 </html>

@@ -1,33 +1,100 @@
+body.isnt-this-month .header__return-btn {
+	height: 1.125rem !important;
+	width: 1.125rem !important;
+	opacity: 1;
+	img {
+		height: 100% !important;
+		width: 100% !important;
+	}
+}
+
 .calendar__week-names {
 	display: grid;
 	grid-template-columns: repeat(7, 1fr);
 	grid-template-rows: 1fr;
 	grid-column: 1 / 8;
+	align-items: center;
 	.calendar__week-day {
 		display: flex;
 		justify-content: center;
 		align-items: center;
 		font-weight: bold;
+		transition: all 0.15s linear;
+		&.active {
+			transform: scale(1.23);
+			color: rgb(0, 200, 0);
+			position: relative;
+			width: max-content;
+			height: max-content;
+			margin: 0 auto;
+			.today__link {
+				display: block;
+				position: absolute;
+				top: 0;
+				right: 0;
+				bottom: 0;
+				left: 0;
+			}
+		}
+	}
+}
+.calendar__section {
+	height: 100%;
+	display: flex;
+	flex-direction: column;
+	flex-grow: 1;
+	.wrapper {
+		flex-grow: 1;
+		height: 100%;
+		padding-bottom: 30px;
+		display: grid;
+		grid-template-columns: repeat(7, 1fr);
+		grid-template-rows: repeat(7, 1fr);
 	}
 }
 .calendar {
 	display: grid;
 	grid-template-columns: repeat(7, 1fr);
-	grid-template-rows: repeat(6, 1fr);
+	// grid-template-rows: repeat(6, 1fr);
 	grid-column: 1 / 8;
 	grid-row: 2 / 8;
 	height: 100%;
 	width: 100%;
 
 	.calendar__day {
-		&:first-child {
-			grid-column: 1 / 2;
-			border-left: 2px solid #000;
+		.pseudo-for-fix {
+			display: none;
 		}
-		&:nth-child(-n + 7) {
+		.link-ico {
+			display: none;
+		}
+		&:first-child {
+			padding-left: 12px;
+			box-sizing: content-box;
+			.pseudo-for-fix {
+				display: block;
+				position: absolute;
+				height: calc(100% + 4px);
+				right: 100%;
+				width: 0;
+				top: 50%;
+				border-right: 2px solid #000;
+				transform: translateY(-50%);
+			}
+			&.border-left-active .pseudo-for-fix {
+				display: none;
+			}
+		}
+		&:nth-child(-n+7) {
 			border-top: 2px solid #000;
 		}
-		&:nth-child(7n + 1) {
+		&.border-top-active {
+			border-top: 2px solid #000;
+		}
+		&.border-bottom-unactive {
+			border-bottom: none;
+		}
+		&.border-left-active {
 			border-left: 2px solid #000;
 		}
 		position: relative;
@@ -47,11 +114,18 @@
 		.calendar__day-items {
 			position: absolute;
 			display: block;
+			display: flex;
+			column-gap: 0.123rem;
 			left: 3px;
 			bottom: 3px;
 			font-size: 0.9rem;
 			z-index: 5;
 			color: #777;
+
+			.text-items {
+				overflow: hidden;
+				text-overflow: ellipsis;
+			}
 		}
 
 		&::after, &::before {
@@ -154,6 +228,37 @@
 		}
 
 		&.today {
+			z-index: 7;
+			border: 5px solid #aaa;
+			// display: flex;
+			// align-items: center;
+			// justify-content: center;
+			position: relative;
+			.border-before {
+				position: absolute;
+				top: -5px;
+				right: 0;
+				bottom: 0;
+				left: -5px;
+				width: calc(100% + 10px);
+				height: calc(100% + 10px);
+				background-image: linear-gradient(to right bottom, rgb(0, 181, 0) 100%, transparent 103%);
+				border-radius: 5px;
+				transition: background-image 0.15s linear;
+				.border-after {
+					position: absolute;
+					top: 5px;
+					left: 5px;
+					width: calc(100% - 10px);
+					height: calc(100% - 10px);
+					background-color: #fff;
+					border-radius: 3px;
+				}
+			}
+			transform: scale(1.05);
+			border-radius: 5px;
+			transition: all 0.15s linear;
+			background-color: #fff;
 			&::after {
 				content: "";
 				position: absolute;
@@ -174,6 +279,83 @@
 				font-size: 1rem;
 				color: #000;
 			}
+			&:hover {
+				transform: scale(1.09);
+			}
+		}
+		&.link-day .link-ico {
+			display: block;
+			position: absolute;
+			right: 3px;
+			bottom: 3px;
+
+			img {
+				height: 0.8rem;
+				width: auto;
+			}
+		}
+	}
+}
+
+.planning {
+	// width: 100%;
+	padding-top: 70px;
+	padding-bottom: 2.13rem;
+	.planning__title {
+		font-weight: 700;
+		font-size: 2.13rem;
+		margin-bottom: 1rem;
+	}
+	.planning__container {
+		display: flex;
+		align-items: center;
+	}
+	.planning__content {
+		display: block;
+		max-width: 100%;
+		min-width: 50%;
+		width: max-content;
+		height: max-content;
+		min-height: 1rem;
+		font-size: 1rem;
+		resize: none;
+		border: none;
+		overflow: hidden;
+		box-sizing: content-box;
+		white-space: normal;
+		word-wrap: break-word;
+		word-break: break-all;
+		padding-bottom: 1px;
+		
+
+		&:empty::before {
+			content: "Запланируйте что либо";
+			color: gray;
+		}
+		&:focus, &:focus-visible {
+			padding-bottom: 0;
+			outline: none;
+			border: none;
+			border-bottom: 1px solid #000;
+		}
+		&:not(:empty) + .planning__btn {
+			opacity: 1;
+			visibility: visible;
+		}
+	}
+	.planning__btn {
+		height: 100%;
+		width: 2.1rem;
+		transition: all 0.15s linear;
+		opacity: 0;
+		visibility: hidden;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		.planning__btn-img {
+			display: block;
+			max-height: 1.91rem;
+			padding: 0.25rem 0;
 		}
 	}
 }

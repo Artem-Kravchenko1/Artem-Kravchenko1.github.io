@@ -1,0 +1,69 @@
+body.scroll-hidden {
+  overflow-y: hidden;
+}
+
+.popup {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  opacity: 0;
+  visibility: hidden;
+  -webkit-transition: all 0.3s linear;
+  transition: all 0.3s linear;
+  overflow-y: auto;
+  overflow-x: hidden;
+  z-index: 11;
+}
+
+.popup .popup__wrapper {
+  width: 100%;
+  min-height: 100%;
+  padding: 15px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.popup .popup__wrapper .popup__content {
+  width: 100%;
+  max-width: 700px;
+  padding: 15px;
+  background-color: #fff;
+  border-radius: 15px;
+  position: relative;
+}
+
+.popup .popup__wrapper .popup__content .popup-close-link {
+  font-size: 1.25rem;
+  font-weight: 700;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  overflow: hidden;
+  position: absolute;
+  right: 1rem;
+  top: 1rem;
+  -webkit-transform: scaleY(0.8);
+          transform: scaleY(0.8);
+}
+
+.popup.open {
+  opacity: 1;
+  visibility: visible;
+}
+/*# sourceMappingURL=popups.css.map */

@@ -1,0 +1,155 @@
+.dates__title {
+	font-size: 1.5rem;
+	font-weight: 700;
+	margin-bottom: 0.789rem;
+}
+.date-content {
+	display: flex;
+	flex-wrap: wrap;
+	column-gap: 1.5rem;
+	.date-item {
+		display: flex;
+		align-items: center;
+		column-gap: 0.3rem;
+		transition: all 0.3s linear;
+		* {
+			background: transparent;
+			font-size: 1rem;
+			white-space: nowrap;
+		}
+		input {
+			padding: 1px 3px;
+			border: none;
+			&:focus, &.empty {
+				padding-bottom: 0;
+				border-bottom: 1px solid #000;
+			}
+		}
+		select {
+			padding: 1px 3px;
+			border: none;
+			&.empty {
+				padding-bottom: 0;
+				border-bottom: 1px solid #000;
+			}
+		}
+		.time-field {
+			display: flex;
+			align-items: center;
+		}
+		.hour-field {
+			width: 2ch;
+		}
+		.minute-field {
+			width: 2ch;
+		}
+		.day-field {
+			width: 2ch;
+		}
+		.year-field {
+			width: 4ch;
+		}
+		.date-item__delete {
+			height: 100%;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			.date-item__delete-img {
+				max-height: 1rem;
+			}
+		}
+		&.last {
+			.date-item__delete {
+				display: none;
+			}
+			animation: showNewItem 0.3s linear;
+
+			@keyframes showNewItem {
+				from {
+					opacity: 0;
+				}
+				to {
+					opacity: 1;
+				}
+			}
+		}
+	}
+	.date-item.empty {
+		> * {
+			visibility: hidden;
+			opacity: 0;
+		}
+	}
+}
+
+.once-dates {
+	margin-bottom: 1rem;
+}
+
+.plan-dates {
+	margin-bottom: 1rem;
+	.plan-dates__content {
+		.plan-dates__tabs {
+			display: flex;
+			column-gap: 0.5rem;
+			align-items: center;
+			margin-bottom: 0.8rem;
+			.plan-dates__tabs-content {
+				display: flex;
+				align-items: center;
+				.plan-dates__tabs-item {
+					padding: 0.25rem;
+					padding-bottom: calc(0.25rem + 1px);
+					display: flex;
+					align-items: center;
+					transition: background 0.15s linear;
+				}
+				.plan-dates__tabs-item.targeter {
+					padding-bottom: 0.25rem;
+					border-bottom: 1px solid #000;
+				}
+				.plan-dates__tabs-item:hover {
+					background-color: rgba($color: #000000, $alpha: 0.1);
+					cursor: pointer;
+				}
+				.plan-dates__tabs-item.targeter:hover {
+					background-color: transparent;
+				}
+			}
+		}
+		.plan-dates__pages {
+			position: relative;
+			box-sizing: content-box;
+			.plan-dates__page {
+				position: absolute;
+				visibility: hidden;
+				opacity: 0;
+				left: 0;
+				top: 0;
+				width: 100%;
+				padding: 1rem 0;
+				transition: all 0.3s linear;
+			}
+			.plan-dates__page.target {
+				visibility: visible;
+				opacity: 1;
+			}
+		}
+	}
+}
+
+.all-plan-describe {
+	margin-bottom: 1.875rem;
+	.all-plan-describe__content {
+		text-align: center;
+	}
+}
+
+.plan__confirm-btn {
+	display: block;
+	margin: 0 auto;
+	width: max-content;
+	padding: 0.3rem 1rem;
+	border: 1px solid #000;
+	border-radius: 11px;
+}

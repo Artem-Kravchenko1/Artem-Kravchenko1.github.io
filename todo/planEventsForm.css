@@ -1,0 +1,227 @@
+.dates__title {
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin-bottom: 0.789rem;
+}
+
+.date-content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-column-gap: 1.5rem;
+          column-gap: 1.5rem;
+}
+
+.date-content .date-item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-column-gap: 0.3rem;
+          column-gap: 0.3rem;
+  -webkit-transition: all 0.3s linear;
+  transition: all 0.3s linear;
+}
+
+.date-content .date-item * {
+  background: transparent;
+  font-size: 1rem;
+  white-space: nowrap;
+}
+
+.date-content .date-item input {
+  padding: 1px 3px;
+  border: none;
+}
+
+.date-content .date-item input:focus, .date-content .date-item input.empty {
+  padding-bottom: 0;
+  border-bottom: 1px solid #000;
+}
+
+.date-content .date-item select {
+  padding: 1px 3px;
+  border: none;
+}
+
+.date-content .date-item select.empty {
+  padding-bottom: 0;
+  border-bottom: 1px solid #000;
+}
+
+.date-content .date-item .time-field {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.date-content .date-item .hour-field {
+  width: 2ch;
+}
+
+.date-content .date-item .minute-field {
+  width: 2ch;
+}
+
+.date-content .date-item .day-field {
+  width: 2ch;
+}
+
+.date-content .date-item .year-field {
+  width: 4ch;
+}
+
+.date-content .date-item .date-item__delete {
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.date-content .date-item .date-item__delete .date-item__delete-img {
+  max-height: 1rem;
+}
+
+.date-content .date-item.last {
+  -webkit-animation: showNewItem 0.3s linear;
+          animation: showNewItem 0.3s linear;
+}
+
+.date-content .date-item.last .date-item__delete {
+  display: none;
+}
+
+@-webkit-keyframes showNewItem {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes showNewItem {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.date-content .date-item.empty > * {
+  visibility: hidden;
+  opacity: 0;
+}
+
+.once-dates {
+  margin-bottom: 1rem;
+}
+
+.plan-dates {
+  margin-bottom: 1rem;
+}
+
+.plan-dates .plan-dates__content .plan-dates__tabs {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-column-gap: 0.5rem;
+          column-gap: 0.5rem;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-bottom: 0.8rem;
+}
+
+.plan-dates .plan-dates__content .plan-dates__tabs .plan-dates__tabs-content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.plan-dates .plan-dates__content .plan-dates__tabs .plan-dates__tabs-content .plan-dates__tabs-item {
+  padding: 0.25rem;
+  padding-bottom: calc(0.25rem + 1px);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-transition: background 0.15s linear;
+  transition: background 0.15s linear;
+}
+
+.plan-dates .plan-dates__content .plan-dates__tabs .plan-dates__tabs-content .plan-dates__tabs-item.targeter {
+  padding-bottom: 0.25rem;
+  border-bottom: 1px solid #000;
+}
+
+.plan-dates .plan-dates__content .plan-dates__tabs .plan-dates__tabs-content .plan-dates__tabs-item:hover {
+  background-color: rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+}
+
+.plan-dates .plan-dates__content .plan-dates__tabs .plan-dates__tabs-content .plan-dates__tabs-item.targeter:hover {
+  background-color: transparent;
+}
+
+.plan-dates .plan-dates__content .plan-dates__pages {
+  position: relative;
+  -webkit-box-sizing: content-box;
+          box-sizing: content-box;
+}
+
+.plan-dates .plan-dates__content .plan-dates__pages .plan-dates__page {
+  position: absolute;
+  visibility: hidden;
+  opacity: 0;
+  left: 0;
+  top: 0;
+  width: 100%;
+  padding: 1rem 0;
+  -webkit-transition: all 0.3s linear;
+  transition: all 0.3s linear;
+}
+
+.plan-dates .plan-dates__content .plan-dates__pages .plan-dates__page.target {
+  visibility: visible;
+  opacity: 1;
+}
+
+.all-plan-describe {
+  margin-bottom: 1.875rem;
+}
+
+.all-plan-describe .all-plan-describe__content {
+  text-align: center;
+}
+
+.plan__confirm-btn {
+  display: block;
+  margin: 0 auto;
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content;
+  padding: 0.3rem 1rem;
+  border: 1px solid #000;
+  border-radius: 11px;
+}
+/*# sourceMappingURL=planEventsForm.css.map */

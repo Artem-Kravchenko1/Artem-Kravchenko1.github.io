@@ -1,0 +1,108 @@
+.authorization {
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+  background-color: #999;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.authorization .authorization__content {
+  max-width: 500px;
+  width: 100%;
+  margin: 0 auto;
+  background-color: #fff;
+  padding: 1rem;
+}
+
+.authorization .authorization__content .tab__links {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-size: 1.25rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+}
+
+.authorization .authorization__content .tab__links a {
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+  text-align: center;
+  padding: 0.3rem;
+  padding-bottom: calc(0.3rem + 3px);
+}
+
+.authorization .authorization__content .tab__links a.active {
+  border-bottom: 3px solid #000;
+  padding-bottom: 0.3rem;
+}
+
+.authorization .authorization__content .tab__targets {
+  width: 100%;
+  min-height: 100px;
+  position: relative;
+}
+
+.authorization .authorization__content .tab__targets .authorization__item {
+  position: absolute;
+  width: 100%;
+  visibility: hidden;
+  opacity: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-transition: all 0.3s linear;
+  transition: all 0.3s linear;
+}
+
+.authorization .authorization__content .tab__targets .authorization__item div:first-child {
+  margin-bottom: 0.5rem;
+}
+
+.authorization .authorization__content .tab__targets .authorization__item input {
+  border: 1px solid #000;
+  padding: 1px;
+  border-radius: 7px;
+  margin-left: 0.5rem;
+}
+
+.authorization .authorization__content .tab__targets .authorization__item input:focus {
+  border: 2px solid #000;
+  padding: 0;
+}
+
+.authorization .authorization__content .tab__targets .authorization__item.target {
+  visibility: visible;
+  opacity: 1;
+}
+
+.authorization .authorization__content .confirm {
+  padding: 0.3rem;
+  border-radius: 7px;
+  border: 1px solid #000;
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content;
+  display: block;
+  margin: 0 auto;
+}
+/*# sourceMappingURL=authorization.css.map */

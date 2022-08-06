@@ -10,17 +10,50 @@
           align-items: center;
   padding: 15px;
   margin-bottom: 50px;
+  -webkit-transition: all 0.15s linear;
+  transition: all 0.15s linear;
+}
+
+.header .header__tab {
+  position: relative;
+}
+
+.header .header__tab-progress-line {
+  position: absolute;
+  width: 100%;
+  height: 3px;
+  background: #ccc;
+  border-radius: 3px;
+  -webkit-transition: all 0.15s linear;
+  transition: all 0.15s linear;
+}
+
+.header .header__tab-progress-line .line-after {
+  height: 100%;
+  width: 0%;
+  position: absolute;
+  left: 0;
+  border-radius: 5px;
+  background: #00b700;
+  -webkit-transition: all 0.15s linear;
+  transition: all 0.15s linear;
 }
 
 .header .header__date {
+  width: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   -webkit-column-gap: 7px;
           column-gap: 7px;
+  -webkit-transition: all 0.15s linear;
+  transition: all 0.15s linear;
 }
 
 .header .header__date .header__date-btn {
@@ -80,6 +113,31 @@
   -webkit-transform-origin: bottom left;
           transform-origin: bottom left;
   left: 0;
+}
+
+.header .header__date .header__return-btn {
+  width: 0;
+  height: 0;
+  display: block;
+  -webkit-transition: all 0.15s linear;
+  transition: all 0.15s linear;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.header .header__date .header__return-btn img {
+  display: block;
+  width: 0;
+  height: 0;
+  -webkit-transition: all 0.15s linear;
+  transition: all 0.15s linear;
 }
 
 .header .header__date .header__date-day {
