@@ -249,7 +249,7 @@ function initItems() {
 		if (snapshot.val()['nextItemId']) nextItemId = snapshot.val()['nextItemId'];
 		else {
 			nextItemId = Object.keys(items).length;
-			set(ref(database, `todolist-app/${userName}/calendarData/year_`+showDayYear+'/month_'+showDayMonth+'/day_'+showDayDate+'/nextItemId'), nextItemId).then();
+			set(ref(database, `todolist-app/${userName}/calendarData/year_`+showDayYear+'/month_'+showDayMonth+'/day_'+showDayDate+'/nextItemId'), nextItemId);
 		}
 		if (snapshot.val()['textareaContent']) descriptionContent = snapshot.val()['textareaContent'];
 		let item = document.querySelector('.items__item');
