@@ -239,17 +239,17 @@ export function initDay() {
 
 function initItems() {
 	onValue(ref(database, `todolist-app/${userName}/calendarData/year_`+showDayYear+'/month_'+showDayMonth+'/day_'+showDayDate), snapshot => {
+		console.log(`todolist-app/${userName}/calendarData/year_`+showDayYear+'/month_'+showDayMonth+'/day_'+showDayDate);
+		console.log(snapshot.val());
 		clearDay();
 		items = {};
 		nextItemId = 1;
 		descriptionContent = '';
-		// console.log('val', snapshot.val());
-		// console.log(items);
 		if (snapshot.val()['items']) items = snapshot.val()['items'];
 		if (snapshot.val()['nextItemId']) nextItemId = snapshot.val()['nextItemId'];
 		else {
 			nextItemId = Object.keys(items).length;
-			set(ref(database, `todolist-app/${userName}/calendarData/year_`+showDayYear+'/month_'+showDayMonth+'/day_'+showDayDate+'/nextItemId'), nextItemId);
+			set(ref(database, `todolist-app/${userName}/calendarData/year_`+showDayYear+'/month_'+showDayMonth+'/day_'+showDayDate+'/nextItemId'), nextItemId).then();
 		}
 		if (snapshot.val()['textareaContent']) descriptionContent = snapshot.val()['textareaContent'];
 		let item = document.querySelector('.items__item');

@@ -45,8 +45,8 @@ export function createCalendarData(way) {
 			}
 		}
 	}
-	console.log('yeah')
+	// console.log('yeah')
 	set(ref(database, `${way}/calendarData`), calendar);
 }
 
-createCalendarData('todolist-app/Artem');
+// createCalendarData('todolist-app/Artem');
