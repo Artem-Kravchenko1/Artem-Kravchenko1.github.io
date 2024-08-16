@@ -2,22 +2,730 @@
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
-	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<link rel="stylesheet" href="style.css">
-	<title>Server Site</title>
+	<meta name="description" content="Вас вітає студія естетичної косметології Powitrula. Наш майстер високо кваліфікований та має легку руку. Ми пропонуємо вам найпопулярніші послуги за приємними цінами. Тож скоріш замовляйте безкоштовну консультацію">
+	<meta name="robots" content="index, follow">
+	<link rel="preload" fetchpriority="high" as="image" href="img/introBg.jpg" type="image/jpg">
+	<link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="preload">
+	<link rel="stylesheet" href="css/reset.css">
+	<link rel="stylesheet" href="css/style.css">
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
+	<link rel="icon" type="image/ico" href="img/logo.ico" />
+	<title>Powitrula | Косметологія</title>
 </head>
 <body>
-	<div class="container">
-		<ul>
-			<li><a href="roman-somara-min/" target="_blank" rel="noopener noreferrer">Roman Somara</a></li>
-			<li><a href="ads-pro/" target="_blank" rel="noopener noreferrer">Ads Pro</a></li>
-			<li><a href="designer-site/" target="_blank" rel="noopener noreferrer">Designer Site</a></li>
-			<li><a href="photo-studio/" target="_blank" rel="noopener noreferrer">Photo Studio</a></li>
-			<li><a href="mobile-app" target="_blank" rel="noopener noreferrer">Mobile App</a></li>
-			<li><a href="game-site/" target="_blank" rel="noopener noreferrer">Game Site</a></li>
-			<li><a href="todo/" target="_blank" rel="noopener noreferrer">TODO</a></li>
-		</ul>
-	</div>
+	<header class="header">
+		<div class="wrapper">
+			<div class="header__container">
+				<a href="#intro" class="header__logo">
+					<div class="header__logo-pic">
+						<img src="img/logo.png" alt="lips" class="header__logo-img">
+					</div>
+					<div class="header__logo-text">Powitrula <p>| Миргород</p></div>
+				</a>
+				<nav class="header__nav nav">
+					<a href="#about" class="nav__item nav__item--active">Про мене</a>
+					<a href="#services" class="nav__item">Послуги</a>
+					<a href="#works" class="nav__item">Роботи</a>
+					<a href="#reviews" class="nav__item">Відгуки</a>
+					<a href="#contacts" class="nav__item btn-1">Контакти</a>
+				</nav>
+				<div class="header__burger burger">
+					<a href="#!" class="burger__button" alt="burger"></a>
+					<nav class="burger__nav nav">
+						<a href="#about" class="nav__item nav__item--active">Про мене</a>
+						<a href="#services" class="nav__item">Послуги</a>
+						<a href="#works" class="nav__item">Роботи</a>
+						<a href="#reviews" class="nav__item">Відгуки</a>
+					</nav>
+					<a href="#contacts" class="burger__link btn-1">Контакти</a>
+				</div>
+			</div>
+		</div>
+	</header>
+	<main class="main">
+		<section id="intro" class="intro">
+			<div class="wrapper">
+				<div class="intro__container">
+					<div class="intro__heading heading">
+						<p class="heading__subtitle">Студія ін'єкційної та естетичної косметології</p>
+						<h1 class="heading__title">PO<span class="pink">W</span>ITRULA</h1>
+						<div class="heading__tags tags">
+							<a href="#lips" class="tags__item btn-2">контурна пластика губ</a>
+							<a href="#botocs" class="tags__item btn-2">ботулінотерапія</a>
+							<a href="#bio" class="tags__item btn-2">біоревіталізація</a>
+							<a href="#clean" class="tags__item btn-2">чистка обличчя</a>
+						</div>
+					</div>
+					<a href="#about" class="intro__find-out">
+						<p class="intro__find-out--text">Дізнатися більше</p>
+						<div class="intro__find-out--arrow">
+							<img src="img/arrows/arrow1.svg" alt="down arrow" class="arrow">
+						</div>
+					</a>
+				</div>
+			</div>
+		</section>
+		<section id="about" class="about">
+			<div class="wrapper">
+				<div class="about__container">
+					<div class="about__photo">
+						<img class="about__photo--img" src="img/aboutPhoto2.jpg" alt="my portret photo">
+					</div>
+					<div class="about__content">
+						<h2 class="about__title">Хто я?</h2>
+						<p class="about__text">
+							Кравченко Вікторія Валентинівна, 1981 р.н.
+							Кваліфікований спеціаліст в області естетичної та інʼєкційної косметології .
+							Маю медичну освіту.
+							Досвід роботи більше 15 років. 
+							Проводжу всі види інʼєкційних та доглядових процедур.
+							<div class="about__place"><img src="img/pin.png" alt="" class="pin">м. Миргород, тц Центральний Ринок, вул. Якова Усика 1/Д, 2 поверх, 41 каб</div>
+						</p>
+						<!-- <div class="about__arrow">
+							<img src="img/arrows/arrow2.svg" alt="" class="arrow">
+						</div> -->
+					</div>
+				</div>
+			</div>
+		</section>
+		<section class="certificates">
+			<div class="certificates__heading">
+				<h2 class="certificates__title">ВАШ ВИБІР <span class="mob">- </span>ПРОФЕСІОНАЛЬНИЙ</h2>
+				<p class="certificates__subtitle">Постійно навчаюся та підвищую свою кваліфікацію</p>
+			</div>
+			<div class="certificates__slider slider1 swiper">
+				<div class="swiper-wrapper">
+					<div class="cert swiper-slide">
+						<div class="cert__photo">
+							<img loading="lazy" class="fullImg" src="img/certs/cert1.jpg" alt="">
+						</div>
+						<div class="cert__note">
+							<p class="cert__note-text">Контурна пластика "Профіль Джолі"</p>
+							<p class="cert__note-author">MEDUZA_YL</p>
+						</div>
+					</div>
+					<div class="cert swiper-slide">
+						<div class="cert__photo">
+							<img loading="lazy" class="fullImg" src="img/certs/cert2.jpg" alt="">
+						</div>
+						<div class="cert__note">
+							<p class="cert__note-text">Біоревіталізація</p>
+							<p class="cert__note-author">KODIY SCHOOL</p>
+						</div>
+					</div>
+					<div class="cert swiper-slide">
+						<div class="cert__photo">
+							<img loading="lazy" class="fullImg" src="img/certs/cert3.jpg" alt="">
+						</div>
+						<div class="cert__note">
+							<p class="cert__note-text">Ботулінотерапія</p>
+							<p class="cert__note-author">KODIY SCHOOL</p>
+						</div>
+					</div>
+					<div class="cert swiper-slide">
+						<div class="cert__photo">
+							<img loading="lazy" class="fullImg" src="img/certs/cert4.jpg" alt="">
+						</div>
+						<div class="cert__note">
+							<p class="cert__note-text">Сучасні тенденції контурної пластики губ</p>
+							<p class="cert__note-author">MEDUZA_YL</p>
+						</div>
+					</div>
+					<div class="cert swiper-slide">
+						<div class="cert__photo">
+							<img loading="lazy" class="fullImg" src="img/certs/cert5.jpg" alt="">
+						</div>
+						<div class="cert__note">
+							<p class="cert__note-text">Косметик та естетист по тілу</p>
+							<p class="cert__note-author">Partner plus</p>
+						</div>
+					</div>
+					<div class="cert swiper-slide">
+						<div class="cert__photo">
+							<img loading="lazy" class="fullImg" src="img/certs/cert6.jpg" alt="">
+						</div>
+						<div class="cert__note">
+							<p class="cert__note-text">Робота з усіма лініями препаратів "CHRISTINA"</p>
+							<p class="cert__note-author">CHRISTINA</p>
+						</div>
+					</div>
+					<div class="cert swiper-slide">
+						<div class="cert__photo">
+							<img loading="lazy" class="fullImg" src="img/certs/cert7.jpg" alt="">
+						</div>
+						<div class="cert__note">
+							<p class="cert__note-text">Інноваційна програма "НЕПЕРЕВЕРШЕНА ТЕХНІКА"</p>
+							<p class="cert__note-author">LASH ART UNIVERSITY</p>
+						</div>
+					</div>
+					<div class="cert swiper-slide">
+						<div class="cert__photo">
+							<img loading="lazy" class="fullImg" src="img/certs/cert8.jpg" alt="">
+						</div>
+						<div class="cert__note">
+							<p class="cert__note-text">Механізми утворення зморшок</p>
+							<p class="cert__note-author">Школа косметології Яни Ащиної</p>
+						</div>
+					</div>
+					<div class="cert swiper-slide">
+						<div class="cert__photo">
+							<img loading="lazy" class="fullImg" src="img/certs/cert9.jpg" alt="">
+						</div>
+						<div class="cert__note">
+							<p class="cert__note-text">Пілінги в сучасній косметології</p>
+							<p class="cert__note-author">TOP COSMETICS</p>
+						</div>
+					</div>
+					<div class="cert swiper-slide">
+						<div class="cert__photo">
+							<img loading="lazy" class="fullImg" src="img/certs/cert10.jpg" alt="">
+						</div>
+						<div class="cert__note">
+							<p class="cert__note-text">Мезотерапія</p>
+							<p class="cert__note-author">KODIY SCHOOL</p>
+						</div>
+					</div>
+					<div class="cert swiper-slide">
+						<div class="cert__photo">
+							<img loading="lazy" class="fullImg" src="img/certs/cert11.jpg" alt="">
+						</div>
+						<div class="cert__note">
+							<p class="cert__note-text">Мезотерапія, біоревіталізація та біоармування шкіри</p>
+							<p class="cert__note-author">Школа косметології Яни Ащиної</p>
+						</div>
+					</div>
+					<div class="cert swiper-slide">
+						<div class="cert__photo">
+							<img loading="lazy" class="fullImg" src="img/certs/cert12.jpg" alt="">
+						</div>
+						<div class="cert__note">
+							<p class="cert__note-text">Багатофункціональна ботулінотерапія</p>
+							<p class="cert__note-author">Школа косметології Яни Ащиної</p>
+						</div>
+					</div>
+					<div class="cert swiper-slide">
+						<div class="cert__photo">
+							<img loading="lazy" class="fullImg" src="img/certs/cert13.jpg" alt="">
+						</div>
+						<div class="cert__note">
+							<p class="cert__note-text">Дерматовенерологія для косметологів</p>
+							<p class="cert__note-author">Медичний косметологічний коледж</p>
+						</div>
+					</div>
+					<div class="cert swiper-slide">
+						<div class="cert__photo">
+							<img loading="lazy" class="fullImg" src="img/certs/cert14.jpg" alt="">
+						</div>
+						<div class="cert__note">
+							<p class="cert__note-text">Гармонізація та б'ютифікація</p>
+							<p class="cert__note-author">HYALUAL</p>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="certificates__dots dots swiper-pagination"></div>
+		</section>
+		<section id="services" class="services">
+			<div class="wrapper">
+				<h2 class="services__title">ВАШ ВИБІР - <span class="pink">ЗДОРОВА КРАСА!</span></h2>
+				<div class="services__container cascade">
+					<p class="services__part-heading"><span class="pink">Топ послуги</span></p>
+					<div class="services__item service service1">
+						<div class="service__content">
+							<h3 id="botocs" class="service__title">БОТУЛІНОТЕРАПІЯ</h3>
+							<p class="service__text">- інʼєкційна процедура. Профілактика та лікування мімічних зморшок. Віку не має, тільки покази. І мінус 5 років. Улюблена процедура.</p>
+						</div>
+						<div class="service__photo">
+							<img src="img/face/face1.png" alt="" class="service__img">
+						</div>
+					</div>
+					<div class="services__item service service2">
+						<div class="service__content">
+							<h3 id="bio" class="service__title">БІОРЕВІТАЛІЗАЦІЯ</h3>
+							<p class="service__text">- інʼєкційна процедура, яка наситить вашу шкіру гіалуроновою кислотою, вітамінами та поживними речовинами.</p>
+						</div>
+						<div class="service__photo">
+							<img src="img/face/face2.png" alt="" class="service__img">
+						</div>
+					</div>
+					<div class="services__item service service3">
+						<div class="service__content">
+							<h3 id="clean" class="service__title">ЧИСТКА ОБЛИЧЧЯ</h3>
+							<p class="service__text">- догляд за шкірою, з якого починається особиста гігієна. Здорова і чиста шкіра є запорукою здорового способу життя.</p>
+						</div>
+						<div class="service__photo">
+							<img src="img/face/face3.png" alt="" class="service__img">
+						</div>
+					</div>
+					<div class="services__item service service4">
+						<div class="service__content">
+							<h3 id="lips" class="service__title">КОНТУРНА ПЛАСТИКА ГУБ</h3>
+							<p class="service__text"> - Топ процедура. Виправить асиметрію, додасть  обʼєму, виділить  контур. А також  для тих хто мріє про зволожені, соковиті, пишні та стильні губки.</p>
+						</div>
+						<div class="service__photo">
+							<img src="img/face/face4.png" alt="" class="service__img">
+						</div>
+					</div>
+					<div class="services__line"></div>
+					<div class="services__part-heading"><span class="pink">Повний перелік послуг</span></div>
+					<div class="services__list prices">
+						<div class="services__list-item prices__item price">
+							<div class="price__heading">
+								<div class="price__naming">Ботулінотерапія</div>
+								<div class="price__price pink">1300грн/зона</div>
+							</div>
+						</div>
+						<div class="services__list-item prices__item price">
+							<div class="price__heading">
+								<div class="price__naming">Контурна пластика губ</div>
+								<div class="price__price pink">1700грн/0.5мл<br>2800грн/1мл</div>
+							</div>
+						</div>
+						<div class="services__list-item prices__item price">
+							<div class="price__heading">
+								<div class="price__naming">Контурна пластика обличчя:</div>
+								<div class="price__price pink">від 2800грн/1мл</div>
+							</div>
+							<ul>
+								<li>носогубні складки</li>
+								<li>вилиці</li>
+								<li>щічки молодості</li>
+								<li>підборіддя</li>
+								<li>кути Джолі</li>
+							</ul>
+						</div>
+						<div class="services__list-item">
+							<div class="price__heading">
+								<div class="price__naming">Бланшинг<span class="small"> - заповнення глибоких зморшок гіалуроновою кислотою, які не корегуються ботулінотерапією</span></div>
+								<div class="price__price pink">1700грн/0.5мл<br>2800грн/1мл</div>
+							</div>
+							<span class="small"> - заповнення глибоких зморшок гіалуроновою кислотою, які не корегуються ботулінотерапією</span>
+						</div>
+						<div class="services__list-item">
+							<div class="price__heading">
+								<div class="price__naming">Мезотерапія</div>
+								<div class="price__price pink">від 750грн</div>
+							</div>
+						</div>
+						<div class="services__list-item">
+							<div class="price__heading">
+								<div class="price__naming">Біоревіталізація</div>
+								<div class="price__price pink">від 1500грн</div>
+							</div>
+						</div>
+						<div class="services__list-item">
+							<div class="price__heading">
+								<div class="price__naming">Редермалізація</div>
+								<div class="price__price pink">від 3000грн</div>
+							</div>
+							
+						</div>
+						<div class="services__list-item">
+							<div class="price__heading">
+								<div class="price__naming">Ліполітики Тріада</div>
+								<div class="price__price pink">2500грн</div>
+							</div>
+							
+						</div>
+						<div class="services__list-item">
+							Гігієна обличчя - чистка:
+							<ul>
+								<li>
+									<div class="price__heading">
+										<div class="price__naming">Механічна</div>
+										<div class="price__price pink">800грн</div>
+									</div>
+								</li>
+								<li>
+									<div class="price__heading">
+										<div class="price__naming">Ультразвукова</div>
+										<div class="price__price pink">800грн</div>
+									</div>
+								</li>
+								<li>
+									<div class="price__heading">
+										<div class="price__naming">Комбінована</div>
+										<div class="price__price pink">1000грн</div>
+									</div>
+								</li>
+							</ul>
+						</div>
+						<div class="services__list-item">
+							<div class="price__heading">
+								<div class="price__naming">Хімічні пілінги:</div>
+								<div class="price__price pink">від 500грн</div>
+							</div>
+							<ul>
+								<li>Поверхневий</li>
+								<li>Серединний</li>
+							</ul>
+						</div>
+						<div class="services__list-item">
+							<div class="price__heading">
+								<div class="price__naming">Мікротокова терапія<span class="small"> - вплив на шкіру та м’язи обличчя струмів низької частоти</span></div>
+								<div class="price__price pink">500грн</div>
+							</div>
+							<span class="small"> - вплив на шкіру та м’язи обличчя струмів низької частоти</span>
+						</div>
+					</div>
+					<div class="services__ending">
+						<p><span class="pink">*Ціни залежать від вартості та обʼєму препарату, тому уточнюйте на консультації</span></p>
+						<a href="#contacts" class="btn-2 services__btn">Замовити консультацію
+							<!-- <img src="img/arrow3.png" alt=""> -->
+						</a>
+					</div>
+				</div>
+			</div>
+		</section>
+		<section class="why-sec">
+			<div class="wrapper">
+				<h2 class="why-sec__title">ЧОМУ САМЕ Я<span class="pink">?</span></h2>
+				<div class="why-sec__container">
+					<div class="why-sec__item why cascade">
+						<div class="why__heading">
+							<h3 class="why__title">КОНСУЛЬТАЦІЯ</h3>
+							<div class="why__pic">
+								<img src="img/free.png" alt="" class="why__img">
+							</div>
+						</div>
+						<p class="why__text">Надам безкоштовну онлайн-консультацію не виходячи з дому</p>
+					</div>
+					<div class="why-sec__item why cascade">
+						<div class="why__heading">
+							<h3 class="why__title">ЯКІСТЬ</h3>
+							<div class="why__pic">
+								<img src="img/shield.png" alt="" class="why__img">
+							</div>
+						</div>
+						<p class="why__text">Використовую у своїй практиці тільки якісні сертифіковані препарати </p>
+					</div>
+					<div class="why-sec__item why cascade">
+						<div class="why__heading">
+							<h3 class="why__title">ЗВ'ЯЗОК 24/7</h3>
+							<div class="why__pic">
+								<img src="img/24-7.png" alt="" class="why__img">
+							</div>
+						</div>
+						<p class="why__text">Я з Вами 24/7 після процедури в період реабілітації</p>
+					</div>
+					<div class="why-sec__item why cascade">
+						<div class="why__heading">
+							<h3 class="why__title">ЗНИЖКА 5%</h3>
+							<div class="why__pic why__pic-discount">
+								<img src="img/discount3.png" alt="" class="why__img">
+							</div>
+						</div>
+						<p class="why__text">5% знижка на першу послугу</p>
+					</div>
+					<div class="why-sec__cross"><img src="img/arrows/cross.svg" alt="" class="why-sec__cross-img"></div>
+				</div>
+			</div>
+		</section>
+		<section id="works" class="works">
+			<!-- <div class="works__subtitle"><span class="pink">мої</span></div> -->
+			<h2 class="works__title"><span class="pink">МОЇ</span> РОБОТИ</h2>
+			<div class="works__slider slider1 swiper">
+				<div class="swiper-wrapper">
+					<div class="work swiper-slide">
+						<img loading="lazy" class="fullImg" src="img/works/work1.jpg" alt="">
+					</div>
+					<div class="work swiper-slide">
+						<img loading="lazy" class="fullImg" src="img/works/work2.jpg" alt="">
+					</div>
+					<div class="work swiper-slide">
+						<img loading="lazy" class="fullImg" src="img/works/work3.jpg" alt="">
+					</div>
+					<div class="work swiper-slide">
+						<img loading="lazy" class="fullImg" src="img/works/work4.jpg" alt="">
+					</div>
+					<div class="work swiper-slide">
+						<img loading="lazy" class="fullImg" src="img/works/work5.jpg" alt="">
+					</div>
+					<div class="work swiper-slide">
+						<img loading="lazy" class="fullImg" src="img/works/work6.jpg" alt="">
+					</div>
+					<div class="work swiper-slide">
+						<img loading="lazy" class="fullImg" src="img/works/work7.jpg" alt="">
+					</div>
+					<div class="work swiper-slide">
+						<img loading="lazy" class="fullImg" src="img/works/work8.jpg" alt="">
+					</div>
+					<div class="work swiper-slide">
+						<img loading="lazy" class="fullImg" src="img/works/work9.jpg" alt="">
+					</div>
+					<div class="work swiper-slide">
+						<img loading="lazy" class="fullImg" src="img/works/work10.jpg" alt="">
+					</div>
+					<div class="work swiper-slide">
+						<img loading="lazy" class="fullImg" src="img/works/work11.jpg" alt="">
+					</div>
+					<div class="work swiper-slide">
+						<img loading="lazy" class="fullImg" src="img/works/work12.jpg" alt="">
+					</div>
+					<div class="work swiper-slide">
+						<img loading="lazy" class="fullImg" src="img/works/work13.jpg" alt="">
+					</div>
+					<div class="work swiper-slide">
+						<img loading="lazy" class="fullImg" src="img/works/work14.jpg" alt="">
+					</div>
+					<div class="work swiper-slide">
+						<img loading="lazy" class="fullImg" src="img/works/work15.jpg" alt="">
+					</div>
+					<div class="work swiper-slide">
+						<img loading="lazy" class="fullImg" src="img/works/work16.jpg" alt="">
+					</div>
+					<div class="work swiper-slide">
+						<img loading="lazy" class="fullImg" src="img/works/work17.jpg" alt="">
+					</div>
+					<div class="work swiper-slide">
+						<img loading="lazy" class="fullImg" src="img/works/work18.jpg" alt="">
+					</div>
+					<div class="work swiper-slide">
+						<img loading="lazy" class="fullImg" src="img/works/work19.jpg" alt="">
+					</div>
+					<div class="work swiper-slide">
+						<img loading="lazy" class="fullImg" src="img/works/work20.jpg" alt="">
+					</div>
+					<div class="work swiper-slide">
+						<img loading="lazy" class="fullImg" src="img/works/work21.jpg" alt="">
+					</div>
+				</div>
+			</div>
+			<div class="works__dots dots swiper-pagination"></div>
+			<!-- <div class="works__arrow">
+				<img src="img/arrows/arrow2.svg" alt="" class="works__arrow-img">
+			</div> -->
+		</section>
+		<section id="reviews" class="reviews">
+			<!-- <div class="reviews__subtitle"><div class="pink">ваші</div></div> -->
+			<h2 class="reviews__title"><span class="pink">ВАШІ</span> ВІДГУКИ</h2>
+			<div class="reviews__slider slider1 swiper">
+				<div class="swiper-wrapper">
+					<div class="review swiper-slide cascade">
+						<div class="review__bg">
+							<img src="img/reviewBg.svg" alt="">
+						</div>
+						<div class="review__heading">
+							<p class="review__author">Ілона</p>
+							<div class="review__logo">
+								<img src="img/logo.png" alt="" class="review__logo-img">
+							</div>
+						</div>
+						<div class="review__text">
+							У мене і отьока як такового не було, і синяків теж, тільки маленька червона крапочка на верхній губі, ну і сліди від самого шприца трохи, то я дуже задоволена&#128525;&#129392;
+						</div>
+					</div>
+					<div class="review swiper-slide cascade">
+						<div class="review__bg">
+							<img src="img/reviewBg.svg" alt="">
+						</div>
+						<div class="review__heading">
+							<p class="review__author">Іра</p>
+							<div class="review__logo">
+								<img src="img/logo.png" alt="" class="review__logo-img">
+							</div>
+						</div>
+						<div class="review__text">
+							Добрий день. Це Іра, хочу подякувати, губки зажили, гарні. Дякую за гарну роботу&#128536;
+						</div>
+					</div>
+					<div class="review swiper-slide cascade">
+						<div class="review__bg">
+							<img src="img/reviewBg.svg" alt="">
+						</div>
+						<div class="review__heading">
+							<p class="review__author">Аня</p>
+							<div class="review__logo">
+								<img src="img/logo.png" alt="" class="review__logo-img">
+							</div>
+						</div>
+						<div class="review__text">
+							Все з губами прекрасно, ви просто чарівниця, навіть отьоку особого немає)
+						</div>
+					</div>
+					<div class="review swiper-slide cascade">
+						<div class="review__bg">
+							<img src="img/reviewBg.svg" alt="">
+						</div>
+						<div class="review__heading">
+							<p class="review__author">Оксана</p>
+							<div class="review__logo">
+								<img src="img/logo.png" alt="" class="review__logo-img">
+							</div>
+						</div>
+						<div class="review__text">
+							Привіт Віка. Все добре. Обличчя трохи пошелушилось, а зараз все супер. Я задоволена
+						</div>
+					</div>
+					<div class="review swiper-slide cascade">
+						<div class="review__bg">
+							<img src="img/reviewBg.svg" alt="">
+						</div>
+						<div class="review__heading">
+							<p class="review__author">Настя</p>
+							<div class="review__logo">
+								<img src="img/logo.png" alt="" class="review__logo-img">
+							</div>
+						</div>
+						<div class="review__text">
+							Привіт) Все супер, навіть синячків немає) Олександра також в захваті, все подобається &#128077;
+						</div>
+					</div>
+					<div class="review swiper-slide cascade">
+						<div class="review__bg">
+							<img src="img/reviewBg.svg" alt="">
+						</div>
+						<div class="review__heading">
+							<p class="review__author">Жанна</p>
+							<div class="review__logo">
+								<img src="img/logo.png" alt="" class="review__logo-img">
+							</div>
+						</div>
+						<div class="review__text">
+							Зай, я така довольна &#129392;&#129392;&#129392; баби сказали шо отлічно, вообще круто &#129392;&#129392;&#129392;
+						</div>
+					</div>
+					<div class="review swiper-slide cascade">
+						<div class="review__bg">
+							<img src="img/reviewBg.svg" alt="">
+						</div>
+						<div class="review__heading">
+							<p class="review__author">Віка</p>
+							<div class="review__logo">
+								<img src="img/logo.png" alt="" class="review__logo-img">
+							</div>
+						</div>
+						<div class="review__text">
+							Привіт, губи добре, отьок сходить під вечір, зменшується
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="reviews__dots dots swiper-pagination"></div>
+		</section>
+		<section id="contacts" class="contacts">
+			<div class="wrapper">
+				<p class="contacts__subtitle">для замовлення <span class="pink">вашої</span> краси</p>
+				<h2 class="contacts__title">ЗВЯЖІТЬСЯ ЗІ <span class="pink">МНОЮ</span></h2>
+				<div class="contacts__container">
+					<a href="https://www.instagram.com/povitrula_vk?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==" class="contact cascade">
+						<div class="contact__logo"><img src="img/instagram.png" alt="" class="contact__img"></div>
+						<p class="contact__text">@povitrula_vk</p>
+					</a>
+					<a href="https://www.facebook.com/profile.php?id=100093705415111" class="contact cascade">
+						<div class="contact__logo"><img src="img/facebook.png" alt="" class="contact__img"></div>
+						<p class="contact__text">косм. Powitrula</p>
+					</a>
+					<a href="viber://chat/?number=%2B380634710036" class="contact cascade">
+						<div class="contact__logo"><img src="img/viber1.png" alt="" class="contact__img"></div>
+						<p class="contact__text">+380634710036</p>
+					</a>
+					<a href="https://t.me/+380634710036" class="contact cascade">
+						<div class="contact__logo"><img src="img/telegram.png" alt="" class="contact__img"></div>
+						<p class="contact__text">+380634710036</p>
+					</a>
+					<a href="tel:+380634710036" class="contact cascade">
+						<div class="contact__logo"><img src="img/phone.png" alt="" class="contact__img"></div>
+						<p class="contact__text">+380634710036</p>
+					</a>
+				</div>
+			</div>
+		</section>
+		<section class="offer">
+			<div class="offer__opening"><span class="pink">або</span></div>
+			<div class="wrapper">
+				<div class="offer__container cascade">
+					<h2 class="offer__title">ЗАЛИШТЕ <span class="pink">СВІЙ</span> НОМЕР ТЕЛЕФОНУ</h2>
+					<div class="offer__subtitle">отримайте <span class="pink">безкоштовну</span> консультацію та <span class="pink">знижку</span> на першу послугу</div>
+					<form action="/" method="post" class="offer__form form">
+						<div class="form__fields">
+							<div class="form__field">
+								<label for="num">Номер телефону:</label>
+								<input class="field" type="tel" id="num" name="num" required>
+							</div>
+							<div class="form__field">
+								<label for="fname">Ваше ім'я:</label>
+								<input class='field' type="text" id="fname" name="fname" required>
+							</div>
+						</div>
+						<div class="offer__sale-container sale-container">
+							<div class="sale">
+								<div class="sale__item">знижка 5%</div>
+								<div class="sale__item">знижка 5%</div>
+								<div class="sale__item">знижка 5%</div>
+								<div class="sale__item">знижка 5%</div>
+								<div class="sale__item">знижка 5%</div>
+								<div class="sale__item">знижка 5%</div>
+								<div class="sale__item">знижка 5%</div>
+								<div class="sale__item">знижка 5%</div>
+								<div class="sale__item">знижка 5%</div>
+								<div class="sale__item">знижка 5%</div>
+								<div class="sale__item">знижка 5%</div>
+								<div class="sale__item">знижка 5%</div>
+							</div>
+						</div>
+						<!-- <div class="offer__arrow"><img src="img/arrow4.png" alt=""></div> -->
+						<div class="offer__btn-container">
+							<input class='btn-1 offer__btn' type="submit" value="Забронювати знижку">
+						</div>
+					</form>
+				</div>
+			</div>
+		</section>
+		<div id="fullpage" class="fullpage">
+			<div class="fullpage__button"></div>
+			<div class="fullpage__image">
+			</div>
+		</div>
+	</main>
+	<footer class="footer">
+		<div class="wrapper">
+			<div class="footer__container">
+				<div class="footer__column">
+					<div class="footer__column-item">
+						<a href="#intro" class="footer__logo">
+							<div class="footer__logo-pic">
+								<img src="img/logo.png" alt="lips" class="footer__logo-img">
+							</div>
+							<div class="footer__logo-text">Powitrula | Миргород</div>
+						</a>
+					</div>
+					<div class="footer__column-item">
+						Для реклами або співпраці напишіть:
+					</div>
+					<div class="footer__column-item">
+						<a class="link" href="">
+							powitrula3@gmail.com
+						</a>
+					</div>
+				</div>
+				<div class="footer__column">
+					<nav class="footer__nav nav">
+						<a href="#about" class="nav__item nav__item--active">Про мене</a>
+						<a href="#services" class="nav__item">Послуги</a>
+						<a href="#works" class="nav__item">Роботи</a>
+						<a href="#reviews" class="nav__item">Відгуки</a>
+						<a href="#contacts" class="nav__item btn-1">Контакти</a>
+					</nav>
+				</div>
+				<div class="footer__column">
+					<a class="link" href="https://www.instagram.com/povitrula_vk?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw=="><img src="img/instagram.png" alt="inst">@povitrula_vk</a>
+					<a class="link" href="https://www.facebook.com/profile.php?id=100093705415111"><img src="img/facebook.png" alt="fb">косм. Powitrula</a>
+					<a class="link" href="viber://chat/?number=%2B380634710036"><img src="img/viber1.png" alt="viber">+380634100774</a>
+					<a class="link" href="https://t.me/+380634710036"><img src="img/telegram.png" alt="tg">+380634100774</a>
+					<a class="link" href="tel:+380634710036"><img src="img/phone.png" alt="phone">+380634100774</a>
+					<a class="link" href="mailto:powitrula3@gmail.com">powitrula3@gmail.com</a>
+				</div>
+			</div>
+		</div>
+		<div class="copyright">&copy;2024 Powitrula studio. All rights reserved.</div>
+	</footer>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js" defer></script>
+	<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js" defer></script>
+	<script src="js/main.js" defer></script>
 </body>
 </html>
